@@ -1,23 +1,23 @@
 using UnityEngine;
 
-public class MagicStaff : Weapons
+public class MagicGun : Weapons
 {
     public GameObject projectile, effect;
     public float power;
     ObjectPooling projectilePool, effectPool;
-    Animator animator;
+    //Animator animator;
 
     private void Start()
     {
         projectilePool = gameObject.AddComponent<ObjectPooling>();
-        effectPool= gameObject.AddComponent<ObjectPooling>();
-        animator = GetComponent<Animator>();
+        effectPool = gameObject.AddComponent<ObjectPooling>();
+        //animator = GetComponent<Animator>();
     }
     public override void Shoot(Transform transform)
     {
-        animator.Play("Shoot");
+        //animator.Play("Shoot");
         GameObject currentProjectile = projectilePool.PoolRequest(projectile);
-        currentProjectile.GetComponent<ProjectileTrigger>().magicStaff = this;
+        currentProjectile.GetComponent<ProjectileTrigger>().magicGun = this;
         currentProjectile.GetComponent<Rigidbody>().velocity = Vector3.zero;
         currentProjectile.transform.position = transform.position;
         currentProjectile.transform.rotation = projectile.transform.rotation;
