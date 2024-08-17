@@ -97,7 +97,7 @@ Transform:
   - {fileID: 2196541226178561156}
   - {fileID: 6754568486049046140}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -96.797, z: 4.484}
 --- !u!95 &8821503390060130114
 Animator:
@@ -109,7 +109,7 @@ Animator:
   m_GameObject: {fileID: 4649432514468636008}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6c3a09362c31de343bd36bb89c8a9f17, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

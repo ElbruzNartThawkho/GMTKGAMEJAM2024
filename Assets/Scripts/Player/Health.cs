@@ -14,7 +14,10 @@ public abstract class Health : MonoBehaviour
 
     private void FixedUpdate()
     {
-        healthSlider.value = Mathf.Lerp(healthSlider.value, currentHealth, Time.deltaTime);
+        if (healthSlider != null)
+        {
+            healthSlider.value = Mathf.Lerp(healthSlider.value, currentHealth, Time.deltaTime);
+        }
     }
 
     public void TakeDamage(float damageAmount)
