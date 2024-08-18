@@ -4,21 +4,21 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Target
   - Enemy
-  - Box
+  - MazeGeo
+  - ' BALL'
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Player
+  - 
   - Water
   - UI
-  - Gun
-  - Projecttile
-  - Box
-  - Enemy
-  - Throwable
+  - 
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 
