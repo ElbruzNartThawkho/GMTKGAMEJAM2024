@@ -1,0 +1,6 @@
+# Made in Blockbench 3.8.4
+newmtl m_0
+map_Kd pgb.png 
+newmtl m_1
+map_Kd pgb2.png 
+newmtl none

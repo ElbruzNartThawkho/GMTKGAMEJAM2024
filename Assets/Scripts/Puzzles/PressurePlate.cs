@@ -19,9 +19,9 @@ public class PressurePlate : MonoBehaviour
     // Üzerindeki nesneleri takip etmek için
     private List<Rigidbody> objectsOnPlate = new List<Rigidbody>();
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        Rigidbody rb = other.GetComponent<Rigidbody>();
+        Rigidbody rb = collision.rigidbody;
         if (rb != null && !objectsOnPlate.Contains(rb))
         {
             objectsOnPlate.Add(rb);
@@ -29,9 +29,9 @@ public class PressurePlate : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    private void OnCollisionExit(Collision collision)
     {
-        Rigidbody rb = other.GetComponent<Rigidbody>();
+        Rigidbody rb = collision.rigidbody;
         if (rb != null && objectsOnPlate.Contains(rb))
         {
             objectsOnPlate.Remove(rb);
