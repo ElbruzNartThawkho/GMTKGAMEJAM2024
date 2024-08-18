@@ -4,11 +4,19 @@ public class ProjectileTrigger : MonoBehaviour
 {
     [HideInInspector] public MagicGun magicGun;
     [SerializeField] float damage = 10;
+    [SerializeField] EnemyClass type;
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            collision.gameObject.GetComponent<Health>().TakeDamage(damage);
+            if (collision.gameObject.GetComponent<Enemies>().enemyClass == type)
+            {
+                collision.gameObject.GetComponent<Health>().TakeDamage(damage);
+            }
+            else
+            {
+                collision.gameObject.GetComponent<Health>().Heal(damage);
+            }
         }
         magicGun.Effect(transform);
         gameObject.SetActive(false);

@@ -4,12 +4,12 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     public LayerMask groundCheck;
-    public float walkSpeed; 
-    public float runSpeed; 
-    public float jumpPower; 
-    public float dashSpeed; 
-    public float dashTime; 
-    public float slideSpeed; 
+    public float walkSpeed;
+    public float runSpeed;
+    public float jumpPower;
+    public float dashSpeed;
+    public float dashTime;
+    public float slideSpeed;
     public float slideTime;
     public float smoothFactor;
     public float gravity;
@@ -21,11 +21,12 @@ public class Movement : MonoBehaviour
     bool doubleJump = false;
     bool dash = true;
     bool isSliding = false;
-    
+
     Vector3 velocity = Vector3.zero;
 
     CharacterController charactercontroller;
     Energy energy;
+    public static Movement Instance;
 
     private void OnDrawGizmos()
     {
@@ -40,10 +41,11 @@ public class Movement : MonoBehaviour
         charactercontroller = GetComponent<CharacterController>();
         energy = GetComponent<Energy>();
         speed = walkSpeed;
+        Instance = this;
     }
     private void FixedUpdate()
     {
-        MovementAndAnim(horizontal,vertical);
+        MovementAndAnim(horizontal, vertical);
     }
     public void MovementAndAnim(float h, float v)
     {
@@ -122,7 +124,7 @@ public class Movement : MonoBehaviour
         Vector3 dashDir = (horizontal > 0.1f || vertical > 0.1f || horizontal < -0.1f || vertical < -0.1f) ? horizontal * transform.right + vertical * transform.forward : transform.forward;
         dashDir.y = 0;
         float startTime = Time.time;
-        while(Time.time<startTime+ dashTime)
+        while (Time.time < startTime + dashTime)
         {
             charactercontroller.Move(dashSpeed * Time.fixedDeltaTime * dashDir);
             yield return new WaitForFixedUpdate();
@@ -138,7 +140,7 @@ public class Movement : MonoBehaviour
             slideDir.y = 0;
             float startTime = Time.time;
             charactercontroller.height = 1;
-            charactercontroller.center = new Vector3(charactercontroller.center.x,-.5f, charactercontroller.center.z);
+            charactercontroller.center = new Vector3(charactercontroller.center.x, -.5f, charactercontroller.center.z);
             transform.GetChild(0).localPosition = new Vector3(transform.GetChild(0).localPosition.x, 0, transform.GetChild(0).localPosition.z);
             while (Time.time < startTime + slideTime)
             {
@@ -158,5 +160,5 @@ public class Movement : MonoBehaviour
     }
     bool GroundCheck() => Physics.CheckSphere(transform.position - new Vector3(0, .8f, 0), .5f, groundCheck, QueryTriggerInteraction.Ignore);
     bool AbovedCheck() => Physics.Raycast(transform.position, transform.up, out RaycastHit hit, 1.2f, groundCheck);
-    
+
 }

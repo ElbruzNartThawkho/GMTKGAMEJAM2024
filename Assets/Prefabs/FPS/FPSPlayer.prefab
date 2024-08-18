@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 102385588834500079}
   - component: {fileID: 288611210297970119}
   - component: {fileID: 5131106229651924363}
+  - component: {fileID: 19331811334040307}
   - component: {fileID: 5537532078365811235}
   - component: {fileID: 7418151528173097057}
   - component: {fileID: 3705086172720553848}
@@ -50,7 +51,7 @@ GameObject:
   - component: {fileID: 4354939216221342802}
   m_Layer: 3
   m_Name: FPSPlayer
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -69,7 +70,7 @@ Transform:
   m_Children:
   - {fileID: 4271209536347334944}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &102385588834500079
 MeshFilter:
@@ -147,6 +148,27 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &19331811334040307
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6204306267262236290}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 2, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &5537532078365811235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,7 +182,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponHolder: {fileID: 0}
-  startingWeapons: []
+  startingWeapons:
+  - {fileID: 4649432514468636008, guid: 68cf32a2331605b409ca8e40e55953fd, type: 3}
+  - {fileID: 4649432514468636008, guid: 78fce4ca1e3bf1848868a4e92b424f09, type: 3}
+  - {fileID: 4649432514468636008, guid: a2d957bdce360444f9076c3cf24cfd14, type: 3}
   selectedWeapon: 0
 --- !u!114 &7418151528173097057
 MonoBehaviour:
