@@ -4,13 +4,21 @@ public class SpawnButton : MonoBehaviour, IInteractable
 {
     public GameObject prefabToSpawn; // Küp prefab'ı burada atanacak
     public Transform spawnPoint; // Objenin spawn olacağı nokta
+    public string objectNameToRemove = "Cube"; // Silinecek objenin ismi
     private GameObject spawnedObject;
 
     public void Interact(PlayerInteract player)
     {
+        // Sahnede belirtilen isimde bir obje olup olmadığını kontrol et ve varsa sil
+        GameObject existingObject = GameObject.Find(objectNameToRemove);
+        if (existingObject != null)
+        {
+            Destroy(existingObject);
+        }
+
+        // Daha önce spawn edilen bir obje varsa, onu sil
         if (spawnedObject != null)
         {
-            // Eğer daha önce spawn edilen bir obje varsa, onu sil
             Destroy(spawnedObject);
         }
 
