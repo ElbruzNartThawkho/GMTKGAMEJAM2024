@@ -13,9 +13,17 @@ public class MovingPlatform : MonoBehaviour
 
     private Vector3 targetPosition; // Platformun şu anki hedef pozisyonu
     private bool isMoving = false;  // Platformun hareket edip etmediğini kontrol eder
+    private AudioSource audioSource; // Ses çalmak için AudioSource
 
     void Start()
     {
+        // AudioSource bileşenini al
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            Debug.LogWarning("AudioSource bileşeni eksik!");
+        }
+
         // Platform başlangıçta hareket edecekse
         if (startMoving)
         {
@@ -37,10 +45,25 @@ public class MovingPlatform : MonoBehaviour
             // Platformu hedef pozisyona doğru hareket ettir
             transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
 
+            // Sesin çalmasını sağla
+            if (!audioSource.isPlaying)
+            {
+                audioSource.loop = true; // Sesin döngüde çalmasını sağlar
+                audioSource.Play();
+            }
+
             // Hedefe ulaştığında, hedef pozisyonu değiştir (diğer tarafa git)
             if (Vector3.Distance(transform.position, targetPosition) < 0.01f)
             {
                 targetPosition = (targetPosition == pointA.position) ? pointB.position : pointA.position;
+            }
+        }
+        else
+        {
+            // Platform durduğunda sesi durdur
+            if (audioSource.isPlaying)
+            {
+                audioSource.Stop();
             }
         }
     }
