@@ -17,7 +17,51 @@ MonoBehaviour:
   m_SharedData: {fileID: 11400000, guid: 30959886700c2f248a28504e5c4cac6c, type: 2}
   m_Metadata:
     m_Items: []
-  m_TableData: []
+  m_TableData:
+  - m_Id: 772753732911104
+    m_Localized: "Kalan D\xFC\u015Fman"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 784936223096832
+    m_Localized: ' Yeni Oyun'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 784962483634176
+    m_Localized: Devam
+    m_Metadata:
+      m_Items: []
+  - m_Id: 784979386679296
+    m_Localized: Ayarlar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 785007782117376
+    m_Localized: "\xC7\u0131k\u0131\u015F"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 786130878316544
+    m_Localized: Geri
+    m_Metadata:
+      m_Items: []
+  - m_Id: 795511724425216
+    m_Localized: "\xC7\xF6z\xFCn\xFCrl\xFCk"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 795658604756992
+    m_Localized: Kalite
+    m_Metadata:
+      m_Items: []
+  - m_Id: 795734270001152
+    m_Localized: Ses
+    m_Metadata:
+      m_Items: []
+  - m_Id: 795816088289280
+    m_Localized: "Parlakl\u0131k"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 799223586996224
+    m_Localized: Fare Hassasiyeti
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

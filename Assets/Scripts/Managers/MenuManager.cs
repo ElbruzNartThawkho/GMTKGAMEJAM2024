@@ -12,17 +12,17 @@ public class MenuManager : MonoBehaviour
 {
     public static MenuManager instance;
 
-    public GameObject finishScreen;
-    public Button nextLvl;
+    //public GameObject finishScreen;
+    //public Button nextLvl;
     //public Button[] lvlBtn;
     public TMP_Dropdown resDropDown, qualityDropdown;
-    public Slider volumeSlider, brightnessSlider;
+    public Slider volumeSlider, brightnessSlider, mouseSensSlider;
     public AudioMixer mixer;
     public Volume globalVolume;
     private LiftGammaGain liftGammaGain;
-    [HideInInspector] public string volume = "Volume", resolution = "Resulotion", quality = "QualityLevel", mouse = "MouseSensitivity", brightness = "Brightness", lvlInfo = "Lvl";
+    [HideInInspector] public string volume = "Volume", resolution = "Resulotion", quality = "QualityLevel", mouse = "MouseSensitivity", brightness = "Brightness", lvlInfo = "Lvl", mouseSens = "MouseSens";
 
-    public GameObject menu, setbtn; //public Player player;
+    //public GameObject menu, setbtn; //public Player player;
     [HideInInspector] public PlayerInputs playerInputs;
     private void Awake()
     {
@@ -30,7 +30,7 @@ public class MenuManager : MonoBehaviour
     }
     private void Start()
     {
-        SetStartSoundValues(); SetStartResValues(); SetStartQualityValues(); SetStartBrightnessValues();
+        SetStartSoundValues(); SetStartResValues(); SetStartQualityValues(); SetStartBrightnessValues(); SetStartMouseSens();
         //if (lvlBtn.Length != 0)
         //{
         //    SetStartLvl();
@@ -39,6 +39,7 @@ public class MenuManager : MonoBehaviour
         brightnessSlider.onValueChanged.AddListener(SetBrightnessValue);
         resDropDown.onValueChanged.AddListener(SetResolutionValues);
         qualityDropdown.onValueChanged.AddListener(SetQualityLevel);
+        mouseSensSlider.onValueChanged.AddListener(SetMouseSens);
         //if (menu != null && player != null)
         //{
         //    playerInputs = new PlayerInputs();
@@ -46,14 +47,20 @@ public class MenuManager : MonoBehaviour
         //    playerInputs.UI.MenuBtn.performed += HandleMenu;
         //}
     }
-    public void Finish()
+
+    private void SetMouseSens(float lvl)
     {
-        //player.SetPlayerInput(false);
-        //player.gamepanel.SetActive(false);
-        menu.SetActive(false);
-        finishScreen.SetActive(true);
-        nextLvl.Select();
+        PlayerPrefs.SetFloat(mouseSens, lvl);
     }
+    public void SetStartMouseSens() => mouseSensSlider.value = PlayerPrefs.GetFloat(mouseSens, 0.5f);
+    //public void Finish()
+    //{
+    //    //player.SetPlayerInput(false);
+    //    //player.gamepanel.SetActive(false);
+    //    //menu.SetActive(false);
+    //    finishScreen.SetActive(true);
+    //    nextLvl.Select();
+    //}
     private void OnDisable()
     {
         try

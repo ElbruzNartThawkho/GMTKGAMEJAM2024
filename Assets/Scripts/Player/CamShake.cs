@@ -16,6 +16,8 @@ public class CamShake : MonoBehaviour
     private void Start()
     {
         cinemachineBasicMultiChannelPerlin = GetComponent<CinemachineVirtualCamera>().GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
+        GetComponent<CinemachineVirtualCamera>().GetCinemachineComponent<CinemachinePOV>().m_HorizontalAxis.m_MaxSpeed = PlayerPrefs.GetFloat("MouseSens", 0.5f);
+        GetComponent<CinemachineVirtualCamera>().GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MaxSpeed = PlayerPrefs.GetFloat("MouseSens", 0.5f);
     }
     public void ShakeCamera(float intensity, float time)
     {

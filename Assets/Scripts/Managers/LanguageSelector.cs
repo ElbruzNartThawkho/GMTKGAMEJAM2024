@@ -1,5 +1,6 @@
-using UnityEngine;
+using System.Collections;
 using TMPro;
+using UnityEngine;
 using UnityEngine.Localization.Settings;
 
 public class LanguageSelector : MonoBehaviour
@@ -11,12 +12,14 @@ public class LanguageSelector : MonoBehaviour
         LangSelector = GetComponent<TMP_Dropdown>();
     }
 
-    private void Start()
+    private IEnumerator Start()
     {
+        yield return LocalizationSettings.InitializationOperation;
         // PlayerPrefs'ten kayýtlý dil bilgisini kontrol et
         if (PlayerPrefs.HasKey("SelectedLanguage"))
         {
             int savedLanguageIndex = PlayerPrefs.GetInt("SelectedLanguage", 0);
+            Debug.Log(savedLanguageIndex);
             // PlayerPrefs'ten alýnan dil indeksini kullanarak dil ayarýný yap
             LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[savedLanguageIndex];
             // TMP_Dropdown'ýn deðerini güncelle

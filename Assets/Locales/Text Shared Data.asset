@@ -14,7 +14,51 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_TableCollectionName: Text
   m_TableCollectionNameGuidString: 30959886700c2f248a28504e5c4cac6c
-  m_Entries: []
+  m_Entries:
+  - m_Id: 772753732911104
+    m_Key: Remain
+    m_Metadata:
+      m_Items: []
+  - m_Id: 784936223096832
+    m_Key: NewGame
+    m_Metadata:
+      m_Items: []
+  - m_Id: 784962483634176
+    m_Key: Continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 784979386679296
+    m_Key: Settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 785007782117376
+    m_Key: Exit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 786130878316544
+    m_Key: Back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 795511724425216
+    m_Key: Resolution
+    m_Metadata:
+      m_Items: []
+  - m_Id: 795658604756992
+    m_Key: Quality
+    m_Metadata:
+      m_Items: []
+  - m_Id: 795734270001152
+    m_Key: Sound
+    m_Metadata:
+      m_Items: []
+  - m_Id: 795816088289280
+    m_Key: Brightness
+    m_Metadata:
+      m_Items: []
+  - m_Id: 799223586996224
+    m_Key: MouseSensivity
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

@@ -1,10 +1,14 @@
+using System;
 using UnityEngine;
 
 public class EnemiesHealth : Health
 {
+    [SerializeField] GameObject deathEffect;
+    public static Action EnemyDied;
     //Animator animator;
     private void Start()
     {
+        FPSGameManager.instance.EnemyCountIncrease();
         //animator = GetComponent<Animator>();
     }
     private void Update()
@@ -17,6 +21,8 @@ public class EnemiesHealth : Health
     }
     public override void Die()
     {
+        Destroy(Instantiate(deathEffect, transform.position, deathEffect.transform.rotation), 2);
+        EnemyDied?.Invoke();
         Destroy(gameObject);
     }
 

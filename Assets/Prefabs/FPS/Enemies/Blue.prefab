@@ -162,6 +162,8 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   healthSlider: {fileID: 0}
+  deathEffect: {fileID: 8438982547201860838, guid: e1afccaacfdf04d4da25141c13bd590e,
+    type: 3}
 --- !u!114 &6363525704677295830
 MonoBehaviour:
   m_ObjectHideFlags: 0

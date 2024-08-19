@@ -4,11 +4,13 @@ using UnityEngine.InputSystem;
 
 public class InputsHandler : MonoBehaviour
 {
+    public static InputsHandler Instance;
     [HideInInspector] public PlayerInputs playerInputs;
     Movement movement;
     WeaponManager weaponManager;
     private void Awake()
     {
+        Instance = this;
         movement = GetComponent<Movement>();
         weaponManager = GetComponent<WeaponManager>();
     }
@@ -65,7 +67,7 @@ public class InputsHandler : MonoBehaviour
 
     private void Crouch_performed(InputAction.CallbackContext obj)
     {
-        if(obj.performed) movement.SlidePerformed();
+        if (obj.performed) movement.SlidePerformed();
     }
 
     private void Jump_performed(InputAction.CallbackContext obj)
