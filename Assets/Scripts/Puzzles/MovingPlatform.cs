@@ -30,7 +30,7 @@ public class MovingPlatform : MonoBehaviour
         targetPosition = pointB.position; // Başlangıç hedefi
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (isMoving)
         {
@@ -62,6 +62,24 @@ public class MovingPlatform : MonoBehaviour
         {
             isMoving = false;
             onPlatformStopMoving.Invoke(); // Platform durduğunda UnityEvent'i tetikle
+        }
+    }
+
+    // Karakter platform üzerinde olduğunda tetiklenecek
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Player")) // Karakterin tag'ını "Player" olarak ayarlayın
+        {
+            other.transform.SetParent(transform);
+        }
+    }
+
+    // Karakter platformdan ayrıldığında tetiklenecek
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player")) // Karakterin tag'ını "Player" olarak ayarlayın
+        {
+            other.transform.SetParent(null);
         }
     }
 }
