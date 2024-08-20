@@ -84,6 +84,11 @@ MonoBehaviour:
       Space.
     m_Metadata:
       m_Items: []
+  - m_Id: 1205124567384064
+    m_Localized: (WASD for movement) Get the ball to the end of the level so the
+      hacking process is completed and you can move on to the next level.
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

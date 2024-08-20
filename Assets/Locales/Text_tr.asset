@@ -84,6 +84,12 @@ MonoBehaviour:
       ile z\u0131pla."
     m_Metadata:
       m_Items: []
+  - m_Id: 1205124567384064
+    m_Localized: "(hareket i\xE7in WASD) Topu seviyenin sonuna ula\u015Ft\u0131r\u0131n,
+      b\xF6ylece hackleme i\u015Flemi tamamlanm\u0131\u015F olur ve bir sonraki seviyeye
+      ge\xE7ebilirsiniz."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
