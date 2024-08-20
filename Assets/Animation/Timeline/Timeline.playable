@@ -17,6 +17,23 @@ MonoBehaviour:
   m_bufferingTime: 0.1
   m_ClipProperties:
     volume: 1
+--- !u!114 &-6097157027876350180
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f10dd60657c6004587f237a7e90f8e4, type: 3}
+  m_Name: AudioPlayableAsset
+  m_EditorClassIdentifier: 
+  m_Clip: {fileID: 8300000, guid: 589734b748793c441a9724b4e27b81b1, type: 3}
+  m_Loop: 0
+  m_bufferingTime: 0.1
+  m_ClipProperties:
+    volume: 1
 --- !u!114 &-5905764719458473981
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -719,23 +736,6 @@ AnimationClip:
   m_HasGenericRootTransform: 1
   m_HasMotionFloatCurves: 0
   m_Events: []
---- !u!114 &-4266100080520605735
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f10dd60657c6004587f237a7e90f8e4, type: 3}
-  m_Name: AudioPlayableAsset
-  m_EditorClassIdentifier: 
-  m_Clip: {fileID: 8300000, guid: 5b2decf93e6bda743a86a76a47a06f56, type: 3}
-  m_Loop: 0
-  m_bufferingTime: 0.1
-  m_ClipProperties:
-    volume: 1
 --- !u!114 &-3826566395424364699
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -758,7 +758,7 @@ MonoBehaviour:
   m_Loop: 0
   m_Version: 1
   m_Rotation: {x: 0, y: 0, z: 0, w: 1}
---- !u!114 &-2896003765472807190
+--- !u!114 &-3136632274366894577
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -770,7 +770,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f10dd60657c6004587f237a7e90f8e4, type: 3}
   m_Name: AudioPlayableAsset
   m_EditorClassIdentifier: 
-  m_Clip: {fileID: 8300000, guid: 89ed66fdf37e8534d8f9424265890b6f, type: 3}
+  m_Clip: {fileID: 8300000, guid: 76ea6fb361b0bb744a3b02cbc857a38e, type: 3}
   m_Loop: 0
   m_bufferingTime: 0.1
   m_ClipProperties:
@@ -1379,23 +1379,6 @@ MonoBehaviour:
   m_Retroactive: 0
   m_EmitOnce: 0
   m_Asset: {fileID: 11400000, guid: 0f27e8230e2977e4a962556d30a8d913, type: 2}
---- !u!114 &-116962692535209292
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f10dd60657c6004587f237a7e90f8e4, type: 3}
-  m_Name: AudioPlayableAsset
-  m_EditorClassIdentifier: 
-  m_Clip: {fileID: 8300000, guid: 03fef80634bdb3d4cbc5fbb60879afbc, type: 3}
-  m_Loop: 0
-  m_bufferingTime: 0.1
-  m_ClipProperties:
-    volume: 1
 --- !u!114 &-4619271787845852
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1418,10 +1401,10 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 37.958315730684745
-    m_ClipIn: 0.75
-    m_Asset: {fileID: -116962692535209292}
-    m_Duration: 4.416666666666664
+    m_Start: 38
+    m_ClipIn: 0
+    m_Asset: {fileID: -6097157027876350180}
+    m_Duration: 3.4546485260770976
     m_TimeScale: 1
     m_ParentTrack: {fileID: -4619271787845852}
     m_EaseInDuration: 0
@@ -1485,12 +1468,12 @@ MonoBehaviour:
     m_PreExtrapolationMode: 0
     m_PostExtrapolationTime: 0
     m_PreExtrapolationTime: 0
-    m_DisplayName: 8
+    m_DisplayName: 2
   - m_Version: 1
-    m_Start: 48.681999999999995
-    m_ClipIn: 1.8666666666666671
-    m_Asset: {fileID: -2896003765472807190}
-    m_Duration: 2.501333333333333
+    m_Start: 48.9433560090703
+    m_ClipIn: 0
+    m_Asset: {fileID: 5349595301440342046}
+    m_Duration: 2.2399773242630387
     m_TimeScale: 1
     m_ParentTrack: {fileID: -4619271787845852}
     m_EaseInDuration: 0
@@ -1554,7 +1537,7 @@ MonoBehaviour:
     m_PreExtrapolationMode: 0
     m_PostExtrapolationTime: 0
     m_PreExtrapolationTime: 0
-    m_DisplayName: 5
+    m_DisplayName: 3
   m_Markers:
     m_Objects: []
   m_TrackProperties:
@@ -1695,10 +1678,10 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: Sliding Glass Door Open - Sound Effect
   - m_Version: 1
-    m_Start: 5.033333333333333
-    m_ClipIn: 0.7833333333333314
-    m_Asset: {fileID: -4266100080520605735}
-    m_Duration: 3.4666666666666686
+    m_Start: 5.07732426303855
+    m_ClipIn: 0
+    m_Asset: {fileID: -3136632274366894577}
+    m_Duration: 3.4226757369614513
     m_TimeScale: 1
     m_ParentTrack: {fileID: 1016008967120746551}
     m_EaseInDuration: 0
@@ -1762,7 +1745,7 @@ MonoBehaviour:
     m_PreExtrapolationMode: 0
     m_PostExtrapolationTime: 0
     m_PreExtrapolationTime: 0
-    m_DisplayName: "Kay\u0131t"
+    m_DisplayName: 1
   m_Markers:
     m_Objects: []
   m_TrackProperties:
@@ -2557,6 +2540,23 @@ MonoBehaviour:
     volume: 1
     stereoPan: 0
     spatialBlend: 0
+--- !u!114 &5349595301440342046
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f10dd60657c6004587f237a7e90f8e4, type: 3}
+  m_Name: AudioPlayableAsset
+  m_EditorClassIdentifier: 
+  m_Clip: {fileID: 8300000, guid: af5ebba8621f863458fbb10f19e7bffe, type: 3}
+  m_Loop: 0
+  m_bufferingTime: 0.1
+  m_ClipProperties:
+    volume: 1
 --- !u!114 &6641803970428111229
 MonoBehaviour:
   m_ObjectHideFlags: 1
