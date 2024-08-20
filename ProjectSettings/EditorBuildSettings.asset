@@ -6,11 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/Scenes/Menu.unity
+    guid: 5736070ece351d14fa4dd1b55f358928
   - enabled: 1
-    path: Assets/Scenes/FPSSample.unity
-    guid: 5e208caa812dfe841be0ede1421559eb
+    path: Assets/Scenes/OpeningCutScene.unity
+    guid: d2c3f03566780764f8a683af785c3a97
   - enabled: 1
     path: Assets/Scenes/Level1.unity
     guid: 5fa57c2bc8265f54489db05e02611b47
@@ -23,6 +23,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level5.unity
     guid: b4d9f6aaa5412244e88a79f1073fd75c
+  - enabled: 1
+    path: Assets/Scenes/MazeGame.unity
+    guid: 72814dead984ad947b552d5a47cffb2f
+  - enabled: 1
+    path: Assets/Scenes/FPSSample.unity
+    guid: 5e208caa812dfe841be0ede1421559eb
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 15116cdab3dd98745ba745d5fc2c5ad4,
       type: 2}

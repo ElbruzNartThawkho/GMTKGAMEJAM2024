@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17957556, g: 0.22485077, b: 0.30643657, a: 1}
+  m_IndirectSpecularColor: {r: 0.17956686, g: 0.22484046, b: 0.30643028, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2738,7 +2738,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee87c688a8b2f9043a2a411b0788e5b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Level5
+  sceneName: MazeGame
 --- !u!65 &480241522
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3175,7 +3175,6 @@ GameObject:
   - component: {fileID: 591190522}
   - component: {fileID: 591190521}
   - component: {fileID: 591190520}
-  - component: {fileID: 591190519}
   m_Layer: 0
   m_Name: Cube (2)
   m_TagString: Untagged
@@ -3183,19 +3182,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &591190519
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 591190518}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee87c688a8b2f9043a2a411b0788e5b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneName: Level5
 --- !u!65 &591190520
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5084,6 +5070,50 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 910835170}
   m_Mesh: {fileID: 4493585093827132993, guid: faa9b0c7ccd52684384dc99f1e244436, type: 3}
+--- !u!1 &924088391
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 924088393}
+  - component: {fileID: 924088392}
+  m_Layer: 0
+  m_Name: Save
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &924088392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 924088391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 662cd0e1c06905a489d7aac4f5a5b7a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &924088393
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 924088391}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.2284214, y: 7.129207, z: 66.19238}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &927897518
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6716,7 +6746,6 @@ GameObject:
   - component: {fileID: 1181293347}
   - component: {fileID: 1181293346}
   - component: {fileID: 1181293345}
-  - component: {fileID: 1181293344}
   m_Layer: 0
   m_Name: Cube (3)
   m_TagString: Untagged
@@ -6724,19 +6753,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1181293344
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1181293343}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee87c688a8b2f9043a2a411b0788e5b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneName: Level5
 --- !u!65 &1181293345
 BoxCollider:
   m_ObjectHideFlags: 0
