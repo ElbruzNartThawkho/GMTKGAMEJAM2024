@@ -9,16 +9,28 @@ public class ObjectScaler : MonoBehaviour
     public float minScale = 0.3f; // Küçülme için minimum limit
     public float maxScale = 6f;   // Büyüme için maksimum limit
 
+    public AudioClip clickSound;  // Tıklama sesi
+    private AudioSource audioSource; // Ses kaynağı
+
+    void Start()
+    {
+        // AudioSource bileşenini al veya ekle
+        audioSource = GetComponent<AudioSource>();
+        audioSource.playOnAwake = false; // Oyun başlar başlamaz sesi çalma
+    }
+
     void Update()
     {
         // Sol tık
         if (Input.GetMouseButtonDown(0))
         {
+            PlayClickSound(); // Sol tıkta sesi çal
             ScaleObject(scaleAmount);
         }
         // Sağ tık
         if (Input.GetMouseButtonDown(1))
         {
+            PlayClickSound(); // Sağ tıkta sesi çal
             ScaleObject(-scaleAmount);
         }
     }
@@ -78,6 +90,14 @@ public class ObjectScaler : MonoBehaviour
             // Kütle = objenin hacmi
             float mass = obj.localScale.x * obj.localScale.y * obj.localScale.z;
             rb.mass = mass;
+        }
+    }
+
+    void PlayClickSound()
+    {
+        if (clickSound != null)
+        {
+            audioSource.PlayOneShot(clickSound);
         }
     }
 }

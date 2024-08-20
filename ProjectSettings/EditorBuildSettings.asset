@@ -12,6 +12,12 @@ EditorBuildSettings:
     path: Assets/Scenes/FPSSample.unity
     guid: 5e208caa812dfe841be0ede1421559eb
   - enabled: 1
+    path: Assets/Scenes/Level1.unity
+    guid: 5fa57c2bc8265f54489db05e02611b47
+  - enabled: 1
+    path: Assets/Scenes/Level2.unity
+    guid: de2a12398f523a241bd25d446b7370a9
+  - enabled: 1
     path: Assets/Scenes/Level3.unity
     guid: cafa253c745af85499d7045703006bca
   - enabled: 1
