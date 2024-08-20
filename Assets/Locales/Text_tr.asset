@@ -62,6 +62,28 @@ MonoBehaviour:
     m_Localized: Fare Hassasiyeti
     m_Metadata:
       m_Items: []
+  - m_Id: 1167164170027008
+    m_Localized: "Tekrar Ba\u015Flat"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1167297985101824
+    m_Localized: "Biti\u015F"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1169282729754624
+    m_Localized: "Hareket ederseniz enerji bar\u0131n\u0131z dolar."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1169610523000832
+    m_Localized: "D\xFC\u015Fmanlar\u0131 do\u011Fru renkli silahlarla vur. Silahlar
+      aras\u0131nda ge\xE7i\u015F yap (fare tekerle\u011Fi veya q/e)."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1169728982728704
+    m_Localized: "Shift ile ko\u015F (havadayken dash atar), Ctrl ile kay, Space
+      ile z\u0131pla."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

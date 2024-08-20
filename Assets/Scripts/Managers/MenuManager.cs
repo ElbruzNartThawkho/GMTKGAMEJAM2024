@@ -21,12 +21,17 @@ public class MenuManager : MonoBehaviour
     public Volume globalVolume;
     private LiftGammaGain liftGammaGain;
     [HideInInspector] public string volume = "Volume", resolution = "Resulotion", quality = "QualityLevel", mouse = "MouseSensitivity", brightness = "Brightness", lvlInfo = "Lvl", mouseSens = "MouseSens";
-
+    int save;
     //public GameObject menu, setbtn; //public Player player;
     [HideInInspector] public PlayerInputs playerInputs;
     private void Awake()
     {
         instance = this;
+        save = PlayerPrefs.HasKey("Level") ? PlayerPrefs.GetInt("Level") : 1;
+    }
+    public void Continue()
+    {
+        SceneManager.LoadScene(save);
     }
     private void Start()
     {

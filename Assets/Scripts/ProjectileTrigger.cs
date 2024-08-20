@@ -9,6 +9,10 @@ public class ProjectileTrigger : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
+            if (collision.gameObject.GetComponent<ColorfulEnemy>().currentState is not AlertState)
+            {
+                collision.gameObject.GetComponent<ColorfulEnemy>().ChangeState(new AlertState());
+            }
             if (collision.gameObject.GetComponent<Enemies>().enemyClass == type)
             {
                 collision.gameObject.GetComponent<Health>().TakeDamage(damage);

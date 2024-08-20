@@ -59,6 +59,26 @@ MonoBehaviour:
     m_Key: MouseSensivity
     m_Metadata:
       m_Items: []
+  - m_Id: 1167164170027008
+    m_Key: Restart
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1167297985101824
+    m_Key: Finish
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1169282729754624
+    m_Key: Tutor1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1169610523000832
+    m_Key: Tutor2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1169728982728704
+    m_Key: Tutor3
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

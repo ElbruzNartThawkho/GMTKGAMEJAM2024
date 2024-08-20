@@ -40,6 +40,7 @@ public class InputsHandler : MonoBehaviour
             playerInputs.Movement.Shoot.performed -= Shoot_performed;
             playerInputs.Movement.ChangeWeapon.performed -= ChangeWeapon_performed;
             playerInputs.Movement.Disable();
+            Cursor.lockState = CursorLockMode.None;
         }
     }
 
